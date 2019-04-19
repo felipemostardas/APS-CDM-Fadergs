@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stValor" />
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
 
     <EditText
         android:id="@+id/edQuantidade"
