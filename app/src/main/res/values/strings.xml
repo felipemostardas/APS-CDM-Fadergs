@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">APS_CDM_Fadergs</string>
+    <string name="title_activity_adiciona_produto">AdicionaProdutoActivity</string>
 </resources>
