@@ -32,6 +32,10 @@ public class Produto {
         return valor;
     }
 
+    public void setValor(float valor){
+        this.valor = valor;
+    }
+
     public int getQuantidade() {
         return quantidade;
     }

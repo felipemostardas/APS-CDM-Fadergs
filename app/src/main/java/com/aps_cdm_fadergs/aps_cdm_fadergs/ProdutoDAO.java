@@ -39,9 +39,9 @@ public class ProdutoDAO {
                 Produto produto = new Produto();
 
                 produto.setId(cursor.getInt(0));
-                produto.getNome(cursor.getString(1));
-                produto.getValor(cursor.getFloat(2));
-                produto.getQuantidade(cursor.getInt(3));
+                produto.setNome(cursor.getString(1));
+                produto.setValor(cursor.getFloat(2));
+                produto.setQuantidade(cursor.getInt(3));
 
                 lista.add(produto);
 
