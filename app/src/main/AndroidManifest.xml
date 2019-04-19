@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroProdutoActivity">
+        <activity android:name=".ListaCompraActivity" />
+        <activity android:name=".ProdutoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListaProdutosActivity" />
-        <activity android:name=".ProdutoActivity"></activity>
     </application>
 
 </manifest>
