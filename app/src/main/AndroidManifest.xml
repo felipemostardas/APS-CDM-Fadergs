@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".AdicionaProdutoActivity"
-            android:label="@string/title_activity_adiciona_produto"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".ListaCompraActivity" />
         <activity android:name=".CadastroProdutoActivity">
             <intent-filter>
