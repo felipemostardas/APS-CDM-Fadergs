@@ -18,13 +18,13 @@ public class ProdutoDAO {
         valores.put("valor", produto.getValor() );
         valores.put("quantidade", produto.getQuantidade() );
         SQLiteDatabase db = banco.getWritableDatabase();
-        db.insert("Produtos", null, valores);
+        db.insert("produtos", null, valores);
     }
 
     public static final void excluir(int idProduto, Context context){
         Banco banco = new Banco(context);
         SQLiteDatabase db = banco.getWritableDatabase();
-        db.delete("Produtos", "id = "+idProduto, null);
+        db.delete("produtos", "id = "+idProduto, null);
     }
 
     public static final List<Produto> listar(Context context){

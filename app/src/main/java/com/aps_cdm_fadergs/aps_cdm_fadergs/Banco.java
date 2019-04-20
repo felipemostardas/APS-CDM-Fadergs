@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Banco extends SQLiteOpenHelper {
 
-    private static final String NOME_BANCO = "Produtos";
+    private static final String NOME_BANCO = "produto";
     private static final int VERSAO_BANCO = 1;
 
     public Banco(Context context){
@@ -15,7 +15,7 @@ public class Banco extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS anotacoes ( " +
+        db.execSQL("CREATE TABLE IF NOT EXISTS produtos ( " +
                 "  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , " +
                 "  titulo TEXT , " +
                 "  texto TEXT  ) " );
