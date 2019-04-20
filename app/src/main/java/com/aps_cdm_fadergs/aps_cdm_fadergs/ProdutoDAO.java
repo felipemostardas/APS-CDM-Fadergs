@@ -40,8 +40,8 @@ public class ProdutoDAO {
 
                 produto.setId(cursor.getInt(0));
                 produto.setNome(cursor.getString(1));
-                produto.setValor(cursor.getFloat(2));
-                produto.setQuantidade(cursor.getInt(3));
+                produto.setValor(cursor.getString(2));
+                produto.setQuantidade(cursor.getString(3));
 
                 lista.add(produto);
 

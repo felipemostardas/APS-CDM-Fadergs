@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etValor" />
 
     <EditText
-        android:id="@+id/edQuantidade"
+        android:id="@+id/etQuantidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"

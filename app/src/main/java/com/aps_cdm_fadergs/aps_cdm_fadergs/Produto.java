@@ -4,8 +4,8 @@ public class Produto {
 
     private int id;
     private String nome;
-    private float valor;
-    private int quantidade;
+    private String valor;
+    private String quantidade;
 
     @Override
     public String toString() {
@@ -28,19 +28,19 @@ public class Produto {
         this.nome = nome;
     }
 
-    public float getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(float valor){
+    public void setValor(String valor){
         this.valor = valor;
     }
 
-    public int getQuantidade() {
+    public String getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(String quantidade) {
         this.quantidade = quantidade;
     }
 

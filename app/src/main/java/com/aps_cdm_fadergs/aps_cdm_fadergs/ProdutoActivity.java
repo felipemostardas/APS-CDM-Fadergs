@@ -19,7 +19,7 @@ public class ProdutoActivity extends AppCompatActivity {
 
         etNome =(EditText) findViewById(R.id.etNome);
         etValor =(EditText) findViewById(R.id.etValor);
-        etQuantidade =(EditText) findViewById(R.id.etNome);
+        etQuantidade =(EditText) findViewById(R.id.etQuantidade);
 
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +32,13 @@ public class ProdutoActivity extends AppCompatActivity {
     }
 
     private void Salvar(){
+        Produto produto = new Produto();
+
+        produto.setNome(etNome.getText().toString());
+        produto.setValor(etValor.getText().toString());
+        produto.setQuantidade(etQuantidade.getText().toString());
+
+        this.finish();
 
 
     }
