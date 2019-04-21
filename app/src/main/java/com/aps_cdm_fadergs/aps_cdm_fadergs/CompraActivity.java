@@ -31,7 +31,7 @@ public class CompraActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        lvLista = (ListView) findViewById(R.id.lvAnotacoes);
+        lvLista = (ListView) findViewById(R.id.lvProduto);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -65,7 +65,7 @@ public class CompraActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_lista_compra, menu);
+        getMenuInflater().inflate(R.menu.menu_compra, menu);
         return true;
     }
 

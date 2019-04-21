@@ -77,45 +77,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvValor" />
 
-    <TextView
-        android:id="@+id/tvQuantidade"
-        android:layout_width="115dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="Quantidade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValor" />
-
-    <EditText
-        android:id="@+id/etQuantidade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="48dp"
-        android:ems="10"
-        android:hint="Digite a quantidade do produto"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuantidade" />
-
     <Button
         android:id="@+id/btnAdicionar"
         android:layout_width="175dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="8dp"
         android:text="Adicionar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQuantidade" />
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
 
 
 </android.support.constraint.ConstraintLayout>
