@@ -17,9 +17,11 @@ public class ProdutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produto);
 
+
         etNome =(EditText) findViewById(R.id.etNome);
         etValor =(EditText) findViewById(R.id.etValor);
         etQuantidade =(EditText) findViewById(R.id.etQuantidade);
+        btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
 
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +29,7 @@ public class ProdutoActivity extends AppCompatActivity {
                 Salvar();
             }
         });
+
 
 
     }
