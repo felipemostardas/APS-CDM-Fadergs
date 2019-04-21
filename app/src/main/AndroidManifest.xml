@@ -10,16 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ProdutoActivity">
+            android:name=".ListaComprasActivity"
+            android:label="@string/title_activity_lista_compras"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListaProdutosActivity"
+            android:label="@string/title_activity_lista_produtos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ProdutoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ListaCompraActivity">
-        </activity>
-        <activity android:name=".ListaProdutosActivity" />
     </application>
 
 </manifest>
