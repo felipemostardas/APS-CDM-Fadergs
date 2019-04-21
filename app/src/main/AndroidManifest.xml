@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".CompraActivity"
+            android:label="@string/title_activity_compra"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ListaComprasActivity"
             android:label="@string/title_activity_lista_compras"
             android:theme="@style/AppTheme.NoActionBar" />
