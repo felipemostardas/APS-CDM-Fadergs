@@ -40,7 +40,7 @@ public class ProdutoActivity extends AppCompatActivity {
         produto.setNome(etNome.getText().toString());
         produto.setValor(etValor.getText().toString());
         produto.setQuantidade(etQuantidade.getText().toString());
-
+        ProdutoDAO.inserir(produto, this);
         this.finish();
 
 
