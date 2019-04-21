@@ -1,5 +1,6 @@
 package com.aps_cdm_fadergs.aps_cdm_fadergs;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.EditText;
 
 public class ProdutoActivity extends AppCompatActivity {
 
-    private EditText etNome, etValor, etQuantidade;
+    private EditText etNome, etValor;
     private Button btnAdicionar;
 
 
@@ -20,7 +21,6 @@ public class ProdutoActivity extends AppCompatActivity {
 
         etNome =(EditText) findViewById(R.id.etNome);
         etValor =(EditText) findViewById(R.id.etValor);
-        etQuantidade =(EditText) findViewById(R.id.etQuantidade);
         btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
 
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
@@ -39,9 +39,11 @@ public class ProdutoActivity extends AppCompatActivity {
 
         produto.setNome(etNome.getText().toString());
         produto.setValor(etValor.getText().toString());
-        produto.setQuantidade(etQuantidade.getText().toString());
         ProdutoDAO.inserir(produto, this);
         this.finish();
+        Intent intent = new Intent(ProdutoActivity.this, CompraActivity.class);
+
+        startActivity(intent);
 
 
     }

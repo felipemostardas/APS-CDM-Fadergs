@@ -16,7 +16,6 @@ public class ProdutoDAO {
         ContentValues valores = new ContentValues();
         valores.put("nome", produto.getNome());
         valores.put("valor", produto.getValor() );
-        valores.put("quantidade", produto.getQuantidade() );
         SQLiteDatabase db = banco.getWritableDatabase();
         db.insert("produtos", null, valores);
     }
@@ -41,7 +40,7 @@ public class ProdutoDAO {
                 produto.setId(cursor.getInt(0));
                 produto.setNome(cursor.getString(1));
                 produto.setValor(cursor.getString(2));
-                produto.setQuantidade(cursor.getString(3));
+
 
                 lista.add(produto);
 

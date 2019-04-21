@@ -5,7 +5,6 @@ public class Produto {
     private int id;
     private String nome;
     private String valor;
-    private String quantidade;
 
     @Override
     public String toString() {
@@ -36,13 +35,6 @@ public class Produto {
         this.valor = valor;
     }
 
-    public String getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(String quantidade) {
-        this.quantidade = quantidade;
-    }
 
 }
 
