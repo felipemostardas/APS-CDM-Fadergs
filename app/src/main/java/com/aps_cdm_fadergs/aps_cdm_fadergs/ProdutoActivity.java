@@ -1,5 +1,6 @@
 package com.aps_cdm_fadergs.aps_cdm_fadergs;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,6 +43,9 @@ public class ProdutoActivity extends AppCompatActivity {
         produto.setQuantidade(etQuantidade.getText().toString());
         ProdutoDAO.inserir(produto, this);
         this.finish();
+        Intent intent = new Intent(ProdutoActivity.this, CompraActivity.class);
+
+        startActivity(intent);
 
 
     }
