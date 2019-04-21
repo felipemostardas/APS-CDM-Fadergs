@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.aps_cdm_fadergs.R;
-
 public class ListaProdutosActivity extends AppCompatActivity {
 
     @Override
