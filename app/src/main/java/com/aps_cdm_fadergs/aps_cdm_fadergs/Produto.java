@@ -36,6 +36,9 @@ public class Produto {
     }
 
 
+    public int getQuantidade() {
+        return 0;
+    }
 }
 
 

@@ -8,12 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.aps_cdm_fadergs.aps_cdm_fadergs.ListaCompra.*;
+
 public class ListaCompraDAO {
 
     public static final void inserir(ListaCompra listaCompra, Context context){
         Banco banco = new Banco(context);
         ContentValues valores = new ContentValues();
-        valores.put("nome", ListaCompra.getNome());
+        valores.put("nome", getNome());
         SQLiteDatabase db = banco.getWritableDatabase();
         db.insert("listas", null, valores);
     }
