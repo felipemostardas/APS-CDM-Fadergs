@@ -13,8 +13,8 @@ public class ListaCompra {
         this.id = id;
     }
 
-    public static String getNome() {
-        return nome;
+    public static void getNome() {
+        //return nome;
     }
 
     public void setNome(String nome) {

@@ -31,4 +31,8 @@ public class Banco extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public byte[] getNome() {
+        return getNome();
+    }
 }
