@@ -16,6 +16,7 @@ public class ProdutoDAO {
         ContentValues valores = new ContentValues();
         valores.put("nome", produto.getNome());
         valores.put("valor", produto.getValor() );
+
         SQLiteDatabase db = banco.getWritableDatabase();
         db.insert("produtos", null, valores);
     }
@@ -26,11 +27,11 @@ public class ProdutoDAO {
         db.delete("produtos", "id = "+idProduto, null);
     }
 
-    public static final List<Produto> listar(Context context){
+    public static final List<Produto> listar(Context context, int codLista){
         List<Produto> lista = new ArrayList<>();
         Banco banco = new Banco(context);
         SQLiteDatabase db = banco.getReadableDatabase();
-        String sql = "SELECT * FROM anotacoes ORDER BY id DESC ";
+        String sql = "SELECT * FROM produtos WHERE codLista = " + codLista +  " ORDER BY id DESC ";
         Cursor cursor = db.rawQuery(sql, null);
         if ( cursor.getCount() > 0 ){
             cursor.moveToFirst();
@@ -48,5 +49,8 @@ public class ProdutoDAO {
             }while ( cursor.moveToNext() );
         }
         return lista;
+    }
+
+    public static List<Produto> listar(ListaProdutosActivity listaProdutosActivity) {
     }
 }

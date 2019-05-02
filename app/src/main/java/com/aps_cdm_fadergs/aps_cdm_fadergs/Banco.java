@@ -24,11 +24,14 @@ public class Banco extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS produtos ( " +
                 "  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , " +
                 "  titulo TEXT , " +
-                "  texto TEXT  ) " );
+                "  texto TEXT, " +
+                "  codLista INTEGER  ) " );
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE produtos");
+        onCreate(db);
 
     }
 
