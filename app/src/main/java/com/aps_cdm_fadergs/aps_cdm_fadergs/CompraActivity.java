@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class CompraActivity extends AppCompatActivity {
 
     ListView lvLista;
-    List<Produto> lista;
+    List<ListaCompra> lista;
     //    ArrayAdapter adapter;
     AdapterCompra adapter;
 
@@ -31,9 +32,20 @@ public class CompraActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CompraActivity.this, ListaProdutosActivity.class);
+                Intent intent = new Intent(CompraActivity.this, CadastroDeListas.class);
 
                 startActivity(intent);
+            }
+        });
+
+        lvLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ListaCompra lc = (ListaCompra) lvLista.getItemAtPosition(position);
+                Intent intent = new Intent(CompraActivity.this, ListaProdutosActivity.class);
+                intent.putExtra("codLista", lc.getId() );
+                startActivity(intent);
+
             }
         });
 
@@ -41,7 +53,7 @@ public class CompraActivity extends AppCompatActivity {
     }
     private void carregarLista(){
 
-        lista = ProdutoDAO.listar(this);
+        lista = ListaCompraDAO.listar(this );
 //        adapter = new ArrayAdapter(this,
 //                android.R.layout.simple_list_item_1, lista );
         adapter = new AdapterCompra(this, lista);

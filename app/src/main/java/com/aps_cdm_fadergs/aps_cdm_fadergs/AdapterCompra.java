@@ -12,10 +12,10 @@ import java.util.List;
 public class AdapterCompra extends BaseAdapter {
 
     private Context context;
-    private List<Produto> lista;
+    private List<ListaCompra> lista;
     private LayoutInflater inflater;
 
-    public AdapterCompra(Context context, List<Produto> lista){
+    public AdapterCompra(Context context, List<ListaCompra> lista){
         this.context = context;
         this.lista = lista;
         this.inflater = LayoutInflater.from(context);
@@ -54,9 +54,9 @@ public class AdapterCompra extends BaseAdapter {
             item = (Suporte) convertView.getTag();
         }
 
-        Produto produto = lista.get( position );
-        item.tvCodigo.setText( String.valueOf( produto.getId() ) );
-        item.tvProduto.setText(  produto.getNome()  );
+        ListaCompra listacompra = lista.get( position );
+        item.tvCodigo.setText( String.valueOf( listacompra.getId() ) );
+        item.tvProduto.setText(  listacompra.getNome()  );
         return convertView;
     }
 

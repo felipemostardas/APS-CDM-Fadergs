@@ -20,6 +20,7 @@ public class ListaProdutosActivity extends AppCompatActivity {
     ListView lvLista;
     List<Produto> lista;
     AdapterProduto adapter;
+    int codLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +29,15 @@ public class ListaProdutosActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        codLista = getIntent().getExtras().getInt("codLista");
+
         lvLista = (ListView) findViewById(R.id.lvProdutos);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaProdutosActivity.this, Produto.class);
+                Intent intent = new Intent(ListaProdutosActivity.this, ProdutoActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +66,7 @@ public class ListaProdutosActivity extends AppCompatActivity {
     }
 
     private void carregarLista(){
-        lista = ProdutoDAO.listar(this);
+        lista = ProdutoDAO.listar(this, codLista);
         adapter = new AdapterProduto(this, lista);
         lvLista.setAdapter(adapter);
     }
@@ -71,6 +74,7 @@ public class ListaProdutosActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         carregarLista();
     }
 

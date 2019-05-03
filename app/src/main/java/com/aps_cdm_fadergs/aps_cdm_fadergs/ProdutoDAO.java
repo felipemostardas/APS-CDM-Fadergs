@@ -51,6 +51,5 @@ public class ProdutoDAO {
         return lista;
     }
 
-    public static List<Produto> listar(ListaProdutosActivity listaProdutosActivity) {
-    }
+
 }
