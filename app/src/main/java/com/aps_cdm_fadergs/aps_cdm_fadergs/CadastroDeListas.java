@@ -30,9 +30,11 @@ public class CadastroDeListas extends AppCompatActivity {
     private void salvar(){
 
         ListaCompra listaCompra = new ListaCompra();
+
         listaCompra.setNome(etNome.getText().toString());
+
         ListaCompraDAO.inserir(listaCompra,this );
-        finish();
+        this.finish();
 
     }
 

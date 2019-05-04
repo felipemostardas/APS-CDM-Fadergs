@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ProdutoDAO {
 
     public static final void inserir(Produto produto, Context context){
@@ -16,7 +15,6 @@ public class ProdutoDAO {
         ContentValues valores = new ContentValues();
         valores.put("nome", produto.getNome());
         valores.put("valor", produto.getValor() );
-
         SQLiteDatabase db = banco.getWritableDatabase();
         db.insert("produtos", null, valores);
     }

@@ -13,10 +13,9 @@ import java.util.List;
 
 
 public class CompraActivity extends AppCompatActivity {
-
     ListView lvLista;
     List<ListaCompra> lista;
-    //    ArrayAdapter adapter;
+    //ArrayAdapter adapter;
     AdapterCompra adapter;
 
     @Override

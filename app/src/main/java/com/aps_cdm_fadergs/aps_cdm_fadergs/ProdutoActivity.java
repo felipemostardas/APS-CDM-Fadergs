@@ -17,8 +17,6 @@ public class ProdutoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produto);
-
-
         etNome =(EditText) findViewById(R.id.etNome);
         etValor =(EditText) findViewById(R.id.etValor);
         btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
@@ -39,6 +37,7 @@ public class ProdutoActivity extends AppCompatActivity {
 
         produto.setNome(etNome.getText().toString());
         produto.setValor(etValor.getText().toString());
+        //produto.setCodLista(  );
         ProdutoDAO.inserir(produto, this);
         this.finish();
         Intent intent = new Intent(ProdutoActivity.this, CompraActivity.class);
