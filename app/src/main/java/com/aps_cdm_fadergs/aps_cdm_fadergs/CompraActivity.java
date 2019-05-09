@@ -50,6 +50,7 @@ public class CompraActivity extends AppCompatActivity {
 
 
     }
+
     private void carregarLista(){
 
         lista = ListaCompraDAO.listar(this );
